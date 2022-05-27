@@ -77,7 +77,9 @@ const Asset = ({route}) => {
       <View style={styles.row}>
         <View style={styles.flexGrow}>
           <Text style={styles.title}>{data?.data?.name}</Text>
-          <Text>${data?.data?.market_data?.price_usd.toFixed(2)}</Text>
+          <Text style={styles.black}>
+            ${data?.data?.market_data?.price_usd.toFixed(2)}
+          </Text>
         </View>
         <TouchableOpacity onPress={() => addRemoveFavorite(data?.data?.slug)}>
           <Icon
@@ -104,8 +106,9 @@ const styles = StyleSheet.create({
   row: {flexDirection: 'row'},
   flexGrow: {flexGrow: 1},
   loader: {flex: 1, justifyContent: 'center'},
-  title: {fontSize: 20},
+  title: {fontSize: 20, color: '#000'},
   marginTop40: {marginTop: 40},
+  black: {color: '#000'},
 });
 
 export default Asset;

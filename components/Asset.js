@@ -6,10 +6,14 @@ const Asset = ({name, price, favorite, onPress}) => {
   return (
     <TouchableOpacity style={styles.item} onPress={onPress}>
       <View>
-        <Text>{name}</Text>
-        <Text>${price}</Text>
+        <Text style={styles.black}>{name}</Text>
+        <Text style={styles.black}>${price}</Text>
       </View>
-      <Icon name={favorite ? 'star' : 'star-outline'} size={20} color="blue" />
+      <Icon
+        name={favorite ? 'md-star' : 'md-star-outline'}
+        size={20}
+        color="blue"
+      />
     </TouchableOpacity>
   );
 };
@@ -20,6 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     margin: 10,
   },
+  black: {color: '#000'},
 });
 
 export default Asset;

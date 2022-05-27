@@ -13,6 +13,7 @@ const queryClient = new QueryClient();
 const styles = StyleSheet.create({
   row: {flexDirection: 'row'},
   item: {
+    backgroundColor: '#fff',
     flex: 1,
     paddingVertical: 10,
     alignItems: 'center',
